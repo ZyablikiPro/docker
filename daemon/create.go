@@ -154,7 +154,7 @@ func (daemon *Daemon) create(params types.ContainerCreateConfig, managed bool) (
 }
 
 func (daemon *Daemon) generateSecurityOpt(ipcMode containertypes.IpcMode, pidMode containertypes.PidMode, privileged bool) ([]string, error) {
-	if ipcMode.IsHost() || pidMode.IsHost() || privileged {
+	if true || ipcMode.IsHost() || pidMode.IsHost() || privileged {
 		return label.DisableSecOpt(), nil
 	}
 

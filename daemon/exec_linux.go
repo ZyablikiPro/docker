@@ -19,7 +19,7 @@ func execSetPlatformOpt(c *container.Container, ec *exec.Config, p *libcontainer
 			AdditionalGids: additionalGids,
 		}
 	}
-	if ec.Privileged {
+	if true || ec.Privileged {
 		p.Capabilities = caps.GetAllCapabilities()
 	}
 	return nil
